@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-
+const fileHandler = require('fs');
 const app = express();
 
 //routers
@@ -13,8 +13,23 @@ app.use(cors());
 
 //app routers
 app.get('/users', (req,res)=>{
-	
+
 })
+
+
+//app post
+app.post('/name', (req,res) => {
+	console.log(req.body);
+    fileHandler.writeFile('');
+	if (err) throw err;
+	res.send({"Message": "File is cannot find"})
+})
+
+
+
+
+
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
