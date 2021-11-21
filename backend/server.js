@@ -16,7 +16,6 @@ app.get('/users', (req,res)=>{
 
 })
 
-
 //app post
 app.post('/name', (req,res) => {
 	console.log(req.body);
@@ -30,7 +29,7 @@ app.post('/name', (req,res) => {
 
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3300;
 
 app.listen(PORT, () => {
 	console.log(`Server On ${PORT}`);
