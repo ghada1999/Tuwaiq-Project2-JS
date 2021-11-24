@@ -1,42 +1,41 @@
-import Button from '@restart/ui/esm/Button';
-import React from 'react'
-import { Card } from 'react-bootstrap';
+import Button from '@restart/ui/esm/Button'
+import React, { useState, useEffect } from 'react'
+import { Card,Container,Row,Col} from 'react-bootstrap';
 import {Link} from 'react-router-dom'
-import {getInformation} from "../dashboard/dashData"
+import axios from 'axios'
+//import {getInformation} from "../dashboard/dashData"
+import '../dashboard/dashboard.css'
 
-export default function CardDash(){
-  let dashBoard =getInformation();
+
+
+export default function CardDash(props){
+  // const [data, setData] = useState({ hits: [] });
+  
+  const [dashBoard, setDashBoard] = useState({})
+  useEffect( () => {
+    axios({
+      url: 'http://localhost:3300/dashboard',
+      method: 'post',
+      data: {
+        nationalId: '1010'
+      }
+    })
+    .then((response) => {
+      // code for if the request succeeds
+      console.log(response)
+      setDashBoard(response.data)
+  }).catch((error)=>{
+      // code for if the request fails
+      console.log(error)
+  })
+}, []);
+
   return(
-    <div style={{display:"flex", justifyContent:"space-around", margin:"50px", padding:"20px" }}>
-      {dashBoard.map(dashData =>(
-      <Card  className="d-flex" style={{ width: '18rem' , border:"5px", borderColor:"black", backgroundColor:"blue" }}>
-      
-  <Card.Img variant="top" src={dashData.img} />
-  <Card.Body>
-    <Card.Title> {dashData.title} </Card.Title>
-    <Card.Text>
-      {dashData.name}
-    </Card.Text>
-    <Card.Text>
-      {dashData.total}
-    </Card.Text>
-    <Link className="btn btn-success" to={`/cardDash/${dashData.id}`} key={dashData.id}></Link>
-    {/* <Link to={`/cardDash/ ${dashData.id}`} key={dashData.id}>
-            
-   </Link> */}
-  </Card.Body>
-
-       
-         <Button>
-          <Link to={`/cardDash/ ${dashData.id}`} key={dashData.id}>
-            button here
-          </Link>
-          </Button>
-        </Card>
-        ))}
-    
-      
+    <div>
+      <h1> The dash board here</h1>
     </div>
   )
 }
+
+ 
 

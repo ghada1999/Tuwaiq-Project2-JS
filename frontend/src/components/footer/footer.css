@@ -1,0 +1,28 @@
+.App{
+    margin: 40px;
+}
+.navbar{
+    display: flex;
+    justify-content: space;
+    justify-content: left;
+  
+}
+.nav-link{
+    display:unset;
+    margin: 5px;
+    padding:inherit;
+    color: grey;
+}
+.nav{
+    margin: 4px;
+    padding: auto;
+    display: flow-root;
+}
+.footer{
+    display:"flex";
+    justify-content:"center";
+}
+.pt-2{
+    display: flex;
+   
+}

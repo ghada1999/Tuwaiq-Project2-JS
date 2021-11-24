@@ -1,4 +1,7 @@
-.d-flex{
-  border: 5px;
-  border-color: black;
+.body{
+
+    /* display:flex;
+     justify-content:space; */
+      margin:5px ;
+     padding:20px;
 }
