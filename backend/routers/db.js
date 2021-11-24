@@ -1,15 +1,17 @@
 const user=[
 {
-    Username:"ghada",
+    email:"ghada@gmail.com",
     password:"123"
 },
 
 {
-    Username:"farah ",
-    password:"567"
+    email:"farah@gmail.com ",
+    password:"999"
 },
 {
-    Username:"Nada ",
+    email:"Nada ",
     password:"994"
 }
 ]
+
+module.exports = {user};

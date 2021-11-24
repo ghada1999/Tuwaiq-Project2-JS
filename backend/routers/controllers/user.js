@@ -1,32 +1,46 @@
-//get user
-
-const user =requier('/db')
+const {user} = require('../db')
 
 
-const geAlltUser=(req,res)=>{
-req.send(user)
+const getAllUser = (req,res)=>{
+    res.send(user)
 }
 
-const getUser=(req,res)=>{
-const foundUser = user.filter((elm,i)=>{
-return i==req.params.id 
+const getUser = (req, res) => {
 
-})
-if (foundUser.lentgh>0){
-res.send(foundUser[0])
-return  
-}
-res.status(404).send("user not found ")
-}
-const addNewUser=(req ,res)=>{
-const addUser={
-Username :req.body.Username,
-password :req.body.password,
+    console.log("hello")
+    const {email, password} = req.body;
+    console.log("email sent:",email)
+    const foundUser = user.find( (elem) => {
+        console.log("email in database:", elem.email)
+        return (elem.email == email && elem.password == password)} );
+    if(foundUser)
+      res.send(foundUser);
+    else
+      res.status(404).send("Not found");
+  };
+//
 
-}
-user.push(addedUser)
+const addNewUser = (req,res)=>{
+    const addedUser = {
+        Username: req.body.Username,
+        password: req.body.password,
+       
+    }
 
-res.status(201).send(addedUser); 
+    user.push(addedUser)
+
+    res.status(201).send(addedUser);
 }
-module.exports={geAlltUser,getUser,addNewUser}
- 
+
+const updateUser = (req,res)=>{
+    const userId = req.query.id
+    user.forEach((elem,i)=>{
+        if(i == userId){
+            elem. email = req.body.email;
+            elem.password = req.body.password;
+           
+        }
+    })
+}
+
+module.exports = {getAllUser,getUser,updateUser,addNewUser} 

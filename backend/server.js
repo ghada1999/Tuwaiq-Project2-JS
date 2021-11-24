@@ -1,9 +1,10 @@
 const express = require('express');
 const cors = require('cors');
-const fileHandler = require('fs');
+//const fileHandler = require('fs');
 const app = express();
 
 //routers
+const {userRouter} = require("./routers/routes/userRouter")
 
 //built-in middlewares
 app.use(express.json());
@@ -12,24 +13,10 @@ app.use(express.json());
 app.use(cors());
 
 //app routers
-app.get('/users', (req,res)=>{
-
-})
+app.use('/user',userRouter);
 
 //app post
-app.post('/name', (req,res) => {
-	console.log(req.body);
-    fileHandler.writeFile('');
-	if (err) throw err;
-	res.send({"Message": "File is cannot find"})
-})
-
-
-
-
-
-
-const PORT = process.env.PORT || 3300;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
 	console.log(`Server On ${PORT}`);
