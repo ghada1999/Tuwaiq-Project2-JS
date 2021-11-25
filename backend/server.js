@@ -1,7 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const fileHandler = require('fs');
+const fs = require('fs');
 const app = express();
+
+const {dashRouter} = require("./routers/routes/dashRouter")
 
 //routers
 
@@ -12,17 +14,10 @@ app.use(express.json());
 app.use(cors());
 
 //app routers
-app.get('/users', (req,res)=>{
+app.use('/dashboard',dashRouter )
 
-})
 
-//app post
-app.post('/name', (req,res) => {
-	console.log(req.body);
-    fileHandler.writeFile('');
-	if (err) throw err;
-	res.send({"Message": "File is cannot find"})
-})
+
 
 
 
