@@ -14,12 +14,14 @@
     justify-content: left;
 }
 .nav3{
+
     display:unset;
     margin: 5px;
     padding:inherit;
     color: grey;
 }
 .nav2{
+
     margin: 4px;
     padding: auto;
     display: flow-root;
@@ -30,4 +32,5 @@
 }
 .p1{
     color: black;
+
 }

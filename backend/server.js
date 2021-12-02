@@ -1,10 +1,13 @@
 const express = require('express');
 const cors = require('cors');
-const fileHandler = require('fs');
+const fs = require('fs');
 const app = express();
+
 
 const { userRouter } = require('./routers/routes/userRouter');
 const { permissionsRouter } = require("./routers/routes/permissionsRouter");
+
+const {dashRouter} = require("./routers/routes/dashRouter")
 
 //routers
 
@@ -18,6 +21,11 @@ app.use(cors());
 
 //app routers
 app.use('/user',userRouter )
+
+app.use('/dashboard',dashRouter )
+
+
+
 
 
 

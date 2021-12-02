@@ -5,7 +5,9 @@ const { users } = require("../db");
 userRouter.get('/',getAllUser);
 userRouter.post('/login',getUser);
 
+
 userRouter.post('/', getPersonInfo);
 // 
+
 module.exports={userRouter};
   
