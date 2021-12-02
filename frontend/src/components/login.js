@@ -111,9 +111,12 @@ export default function Login() {
       .catch((err) => {
         console.log(err);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         alert("Not found")
 >>>>>>> parent of bee75e1 (changes)
+=======
+>>>>>>> parent of cf1740c (projed2tw)
       });
   }
   return (
