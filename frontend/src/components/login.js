@@ -110,6 +110,10 @@ export default function Login() {
       })
       .catch((err) => {
         console.log(err);
+<<<<<<< HEAD
+=======
+        alert("Not found")
+>>>>>>> parent of bee75e1 (changes)
       });
   }
   return (
