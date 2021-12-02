@@ -1,16 +1,13 @@
-const express =requerire("express")
+const express =require("express")
 const userRouter= express.Router();
+const{getUser,getAllUser,getPersonInfo}=require('../controllers/user');
+const { users } = require("../db");
+userRouter.get('/',getAllUser);
+userRouter.post('/login',getUser);
 
-const { default: App } = require('../../../frontend/src/App');
-const{getUser,getAllUser,addNewUser}=require('../controllers/user')
 
-
-userRouter.get('/user' ,getAllUser);
-
-userRouter.get('/user/:id' ,getUser);
-userRouter.post('/user' ,addNewUser);
-
+userRouter.post('/', getPersonInfo);
+// 
 
 module.exports={userRouter};
- 
- 
+  
