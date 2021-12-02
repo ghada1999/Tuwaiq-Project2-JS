@@ -3,33 +3,34 @@ const cors = require('cors');
 const fileHandler = require('fs');
 const app = express();
 
-const { userRouter } = require('./routers/routes/userRouter');
-const { permissionsRouter } = require("./routers/routes/permissionsRouter");
-
 //routers
 
 //built-in middlewares
 app.use(express.json());
 
-
-
 //third-party middleware
 app.use(cors());
 
 //app routers
-app.use('/user',userRouter )
+app.get('/users', (req,res)=>{
+
+})
+
+//app post
+app.post('/name', (req,res) => {
+	console.log(req.body);
+    fileHandler.writeFile('');
+	if (err) throw err;
+	res.send({"Message": "File is cannot find"})
+})
 
 
 
 
-app.use("/permissions", permissionsRouter);
-app.use("/permissions", permissionsRouter);
 
-console.log(global )
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3300;
 
 app.listen(PORT, () => {
 	console.log(`Server On ${PORT}`);
 });
- 

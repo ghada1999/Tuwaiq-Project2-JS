@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 
-
-
 // import provider
 // import store
 
@@ -15,16 +13,3 @@ ReactDOM.render(
 	</Router>,
   document.getElementById("root")
 );
-
-
-
-
-// );
-// const DarkModeToggle = () => {
-// 	const [isDark, setIsDark] = useState(localStorage.getItem("theme") === "dark" ? true : false);
-// 	useEffect(() => {
-// 	  document
-// 	  .getElementsByTagName("HTML")[0]
-// 	  .setAttribute("data-theme", localStorage.getItem("theme"));
-// 	},[]);
-  
