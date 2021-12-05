@@ -1,10 +1,3 @@
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-      width: 100%;
-    }
-  }
-
 .App{
     margin: 40px;
 }
@@ -12,16 +5,15 @@
     display: flex;
     justify-content: space;
     justify-content: left;
+  
 }
 .nav3{
-
     display:unset;
     margin: 5px;
     padding:inherit;
     color: grey;
 }
 .nav2{
-
     margin: 4px;
     padding: auto;
     display: flow-root;
@@ -32,5 +24,5 @@
 }
 .p1{
     color: black;
-
+   
 }

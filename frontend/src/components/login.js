@@ -30,20 +30,12 @@ export default function Login() {
       })
       .catch((err) => {
         console.log(err);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         alert("Not found")
->>>>>>> parent of bee75e1 (changes)
-=======
->>>>>>> parent of cf1740c (projed2tw)
-=======
-        alert("Not found")
->>>>>>> parent of 3436c37 (Revert "projed2tw")
       });
+      
   }
   return (
+    
     <div className="Login">
       <img
         src="https://tawakkalna.sdaia.gov.sa/assets/img/illustrations/twlogo.png"
@@ -64,7 +56,6 @@ export default function Login() {
             "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
         }}
       >
-       
         <Card.Body>
           <Form onSubmit={handleSubmit}>
             <Form.Group size="lg" controlId="email">
@@ -73,6 +64,7 @@ export default function Login() {
               >Login</Form.Label>
               <Link to="/Register">
               <Card.Link
+               
                 style={{ marginLeft: "13rem", color: "#2EAFA1", marginTop: "20px" }}
               >
                 Sign Up
@@ -98,7 +90,6 @@ export default function Login() {
                 <Form.Check type="checkbox" label="remember me" />
               </Form.Group>
             </Form.Group>
-           
             <br></br>
             <Button
              variant="success"
@@ -110,6 +101,7 @@ export default function Login() {
               Next
             </Button>
             <br/>
+            
           </Form>
         </Card.Body>
       </Card>

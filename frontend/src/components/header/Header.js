@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import './Header.css';
+import '../header/header.css';
 import { Navbar, Button, Nav, NavDropdown, Form, Container, Offcanvas  } from 'react-bootstrap';
 import {Link , useNavigate } from "react-router-dom"
 import home1 from '../img/home1.png';
@@ -10,12 +10,14 @@ import organ from '../img/organ.jpg';
 import dash1 from '../img/dash1.png';
 import twlogo from '../img/twlogo.png';
 
+
 function Header () {
   const [dark, setDark]= useState("");
   const nav=useNavigate()
   function myFunction() {
    setDark("gray")
  }
+ 
 
 	return (
 		<div>
@@ -37,12 +39,12 @@ function Header () {
           </NavDropdown>
 
 
-          {/* <Navbar.Brand href="#">   */}
+         
               <img
                src={twlogo} alt="" 
                style={{width: "110px", height: "60px", marginLeft: "550px"}}/>
                
-			   {/* </Navbar.Brand> */}
+			   
 
   <Navbar.Toggle  style={{ marginRight:"100px"}} aria-controls="offcanvasNavbar" />
     <Navbar.Offcanvas
@@ -87,8 +89,7 @@ function Header () {
        size="lg"> <img src={report} style={{ width: "30px", marginTop: "10px", marginRight: "20px" ,marginLeft: "11px", marginBottom: "10px"}}/> Reports</Button>{' '} <br></br>
     
       
-     
-
+      
         </Nav>
         </Offcanvas.Body>
     </Navbar.Offcanvas>
@@ -100,7 +101,3 @@ function Header () {
 
 
 export default Header;
-
-
-
-      

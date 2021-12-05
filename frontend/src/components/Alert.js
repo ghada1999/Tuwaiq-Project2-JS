@@ -22,5 +22,4 @@ function AlertDismissibleExample() {
     }
     return;
   }
-
   export default AlertDismissibleExample;

@@ -1,13 +1,6 @@
 import Header from './header/Header';
 import Footer from "./footer/Footer";
-import {   
-    Card,
-    Col,
-    Container,
-    Row,
-    Form,
-    Button,
-    FormGroup, } from 'react-bootstrap';
+import {Container,Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
 

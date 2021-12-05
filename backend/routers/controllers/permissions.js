@@ -10,7 +10,6 @@ const putPermession = (req, res) => {
         type: req.body.type,
         place: req.body.place,
         numberOfPeople: req.body.numberOfPeople,
-        //
     }
     user.permission.push(newData)
     res.send(permissions);

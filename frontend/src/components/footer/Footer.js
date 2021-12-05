@@ -1,8 +1,10 @@
 import React from 'react';
 import { Col,Row,Container } from 'react-bootstrap';
 import '../footer/footer.css'
+
 const Footer = () => {
-    return <div className="App">
+	return <div className="App">
+
 <Container fluid="md">
   <Row>
     <Col>
@@ -24,9 +26,13 @@ const Footer = () => {
                         </div>
                     </div>
                 </footer>
+    
     </Col>
   </Row>
 </Container>
-    </div>;
+
+
+	</div>;
 };
+
 export default Footer;
